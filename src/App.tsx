@@ -6,16 +6,18 @@ import Accordion from "./components/Accordion";
 function App() {
   return (
     <div >
-      <AppTitle />
-      <Rating/>
-      <Accordion/>
+      <PageTitle title={"Hello, my friends!"}/>
+      <Rating value={3}/>
+      <Accordion title={"menu1"}/>
+      <Accordion title={"menu2"}/>
+      <Rating value={2}/>
     </div>
   );
-  function AppTitle() {
+  function PageTitle(props: any) {
     return (
-        <div>
-          Hello, my friends!
-        </div>
+        <h1>
+          {props.title}
+        </h1>
     )
   }
 }
